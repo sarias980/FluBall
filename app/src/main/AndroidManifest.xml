@@ -19,6 +19,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".JuegosMainActivity" />
+        <activity android:name=".DispositivosMainActivity" />
+        <activity android:name=".ConfigMainActivity" />
+        <activity android:name=".HelpMainActivity"></activity>
     </application>
 
 </manifest>
