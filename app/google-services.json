@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "155915162800",
+    "firebase_url": "https://fluball-142f2.firebaseio.com",
+    "project_id": "fluball-142f2",
+    "storage_bucket": "fluball-142f2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:155915162800:android:dcc6546cf4cde128",
+        "android_client_info": {
+          "package_name": "com.example.sergi.fluball"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "155915162800-p83phu5607bued4c9ja9up0m6nnts6q0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.sergi.fluball",
+            "certificate_hash": "985035f5df48428f1d9a6b7ac29404d61ca2641f"
+          }
+        },
+        {
+          "client_id": "155915162800-9r5ed0275l2unc0nmnquviheipc3mvlo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBfd_m-dG0qAusPuGHjXw62T6sTPXnrC-E"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "155915162800-9r5ed0275l2unc0nmnquviheipc3mvlo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
