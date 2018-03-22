@@ -21,7 +21,7 @@
         </activity>
         <activity android:name=".JuegosMainActivity" />
         <activity android:name=".DispositivosMainActivity" />
-        <activity android:name=".ConfigMainActivity" />
+        <activity android:name=".ConfigurationMainActivity" />
         <activity android:name=".HelpMainActivity"></activity>
     </application>
 

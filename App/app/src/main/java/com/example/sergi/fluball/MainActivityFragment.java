@@ -22,7 +22,7 @@ public class MainActivityFragment extends Fragment {
 
     private static final int RC_SIGN_IN = 123;
     private Intent intent;
-    private TextView name;
+    public TextView name;
 
     public MainActivityFragment() {
     }
@@ -68,7 +68,7 @@ public class MainActivityFragment extends Fragment {
                         break;
                     case R.id.btnOpciones:
                         Log.d("BTN", "Opc");
-                        intent = new Intent(getContext(), ConfigMainActivity.class);
+                        intent = new Intent(getContext(), ConfigurationMainActivity.class);
                         startActivity(intent);
                         break;
                     case R.id.btnHelp:
