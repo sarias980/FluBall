@@ -38,7 +38,7 @@ public class MainActivityFragment extends Fragment {
         Button opciones = (Button) view.findViewById(R.id.btnOpciones);
         Button help = (Button) view.findViewById(R.id.btnHelp);
 
-        FirebaseAuth auth = FirebaseAuth.getInstance();
+        final FirebaseAuth auth = FirebaseAuth.getInstance();
         if (auth.getCurrentUser() != null) {
             updateNameUser(name,auth.getCurrentUser().getEmail());
         } else {
@@ -58,23 +58,24 @@ public class MainActivityFragment extends Fragment {
                 switch (view.getId()) {
                     case R.id.btnJuegos:
                         Log.d("BTN", "Juego");
-                        intent = new Intent(getContext(), JuegosMainActivity.class);
-                        startActivity(intent);
+                        //intent = new Intent(getContext(), JuegosMainActivity.class);
+                        //startActivity(intent);
                         break;
                     case R.id.btnDispositivos:
                         Log.d("BTN", "Dispo");
-                        intent = new Intent(getContext(), DispositivosMainActivity.class);
-                        startActivity(intent);
+                        //intent = new Intent(getContext(), DispositivosMainActivity.class);
+                        //startActivity(intent);
                         break;
                     case R.id.btnOpciones:
                         Log.d("BTN", "Opc");
-                        intent = new Intent(getContext(), ConfigurationMainActivity.class);
+                        intent = new Intent(getContext(), ConfigMainActivity.class);
+                        //intent.putExtra(auth, "FirebaseAuth");
                         startActivity(intent);
                         break;
                     case R.id.btnHelp:
                         Log.d("BTN", "Help");
-                        intent = new Intent(getContext(), HelpMainActivity.class);
-                        startActivity(intent);
+                        //intent = new Intent(getContext(), HelpMainActivity.class);
+                        //startActivity(intent);
                         break;
                 }
             }
