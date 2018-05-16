@@ -1,11 +1,15 @@
 package com.example.sergi.fluball;
 
+import android.content.Intent;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -20,6 +24,7 @@ public class JuegosMainActivityFragment extends Fragment {
 
     private ArrayList<String> items;
     private ArrayAdapter<String> adapter;
+    private BallApi api = new BallApi();
 
     public JuegosMainActivityFragment() {
     }
@@ -33,8 +38,8 @@ public class JuegosMainActivityFragment extends Fragment {
 
         items = new ArrayList<>();
         String[] data = {
-                "Scrap",
-                "Patata Caliente"
+                "led",
+                "botton"
         };
 
         items = new ArrayList<>(Arrays.asList(data));
@@ -46,9 +51,15 @@ public class JuegosMainActivityFragment extends Fragment {
         );
         list.setAdapter(adapter);
 
+        list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Log.d("Sarias", adapterView.getItemAtPosition(i).toString());
+                api.getPlay(adapterView.getItemAtPosition(i).toString());
+            }
+        });
 
         //adapter=new ArrayAdapter<String>(this,android.R.layout.,items);
-
 
         return view;
     }
