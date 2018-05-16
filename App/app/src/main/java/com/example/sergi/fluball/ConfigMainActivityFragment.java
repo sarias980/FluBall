@@ -9,12 +9,18 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.firebase.ui.auth.AuthUI;
 import com.google.firebase.auth.FirebaseAuth;
 
 import java.util.Arrays;
+
+import jp.wasabeef.glide.transformations.CropCircleTransformation;
+
+import static com.bumptech.glide.request.RequestOptions.bitmapTransform;
 
 /**
  * A placeholder fragment containing a simple view.
@@ -36,14 +42,21 @@ public class ConfigMainActivityFragment extends Fragment {
         name = (TextView) view.findViewById(R.id.nombreUsuario);
         correo = (TextView) view.findViewById(R.id.txtCorreo);
         password = (EditText) view.findViewById(R.id.txtPassword);
+        ImageView imagen = (ImageView) view.findViewById(R.id.imageUser);
 
         Button update = (Button) view.findViewById(R.id.btnUpdate);
 
 
         final FirebaseAuth auth = FirebaseAuth.getInstance();
         if (auth.getCurrentUser() != null) {
+            auth.getCurrentUser().getUid();
             updateInfoUser(correo, auth.getCurrentUser().getEmail());
             updateInfoUser(name, auth.getCurrentUser().getDisplayName());
+
+            Glide.with(this).load(auth.getCurrentUser().getPhotoUrl().toString())
+                    .apply(bitmapTransform(new CropCircleTransformation()))
+                    .into(imagen);
+
         } else {
             startActivityForResult(
                     AuthUI.getInstance()

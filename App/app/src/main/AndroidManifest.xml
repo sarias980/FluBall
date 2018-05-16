@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.sergi.fluball">
+
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
 
     <application
         android:allowBackup="true"
@@ -9,6 +16,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
+        <meta-data
+            android:name="com.google.android.nearby.messages.API_KEY"
+            android:value="AIzaSyAxe6uMU_CTg0rzlBHtO5AVUUuGEoyGt8w" />
+
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
@@ -22,6 +34,28 @@
         <activity
             android:name=".ConfigMainActivity"
             android:label="@string/title_activity_config_main"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.sergi.fluball.MainActivity" />
+        </activity>
+        <activity
+            android:name=".JuegosMainActivity"
+            android:label="@string/title_activity_juegos_main"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".AyudaMainActivity"
+            android:label="@string/title_activity_ayuda_main"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.sergi.fluball.MainActivity" />
+        </activity>
+        <activity
+            android:name=".DispositivosMainActivity"
+            android:label="@string/title_activity_dispositivos_main"
             android:parentActivityName=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data

@@ -2,4 +2,7 @@
     <string name="app_name">FluBall</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_config_main">ConfigMainActivity</string>
+    <string name="title_activity_juegos_main">JuegosMainActivity</string>
+    <string name="title_activity_ayuda_main">AyudaMainActivity</string>
+    <string name="title_activity_dispositivos_main">DispositivosMainActivity</string>
 </resources>
